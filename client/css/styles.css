@@ -176,8 +176,8 @@ canvas {
     color: black;
     border-radius: 10px;*/
 
-  color: #bbbbbb;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: #d3d3d3;
+  background-color: rgba(0, 0, 0, 0.5);
   border: hidden;
 }
 
@@ -224,8 +224,13 @@ canvas {
 }
 
 .container-fluid {
-  margin-top: 80px;
+  margin-top: 50px;
 }
+
+.navbar-fixed-top {
+  border: none;
+}
+
 @media (max-width: 1921px) {
 }
 @media (max-width: 991px) {

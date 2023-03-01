@@ -11,9 +11,10 @@
   <div class="well col-md-12 ">
     <div class="home-body" class="">
       <span class="anchor" id="home"></span>
-      <img class="col-xs-6 main-pic" src="/assets/main.png" />
-      <div class="col-xs-6">
-        <div style="height: 100%; display: flex; justify-content: center; flex-direction: column; align-self: stretch; padding-top: 30%;">
+      <img class="col-xs-4 main-pic" src="/assets/Mot de Lina.png" />
+      <div class="col-xs-8">
+        <div style="height: 100%; display: flex; justify-content: center; flex-direction: column; align-self: stretch;">
+          <div class="col-md-12" ng-bind-html="home.homeMessage" id="home-message"></div>
           <p style="text-align: center;">
             <b>
               <span>Jacques Julienne</span>
@@ -39,7 +40,6 @@
             : batterie
           </p>
         </div>
-        <div class="col-md-12" ng-bind-html="home.homeMessage" id="home-message"></div>
       </div>
     </div>
     <div style="clear:both;"></div>

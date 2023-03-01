@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   mongo:
-    image: 'bitnami/mongodb:latest'
+    image: 'bitnami/mongodb:5.0'
     ports:
       - "27017:27017"
     volumes:
