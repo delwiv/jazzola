@@ -5,7 +5,7 @@
   },
   "mongoDB": {
     "host": "localhost",
-    "database": "swing-family",
+    "database": "jazzola",
     "name": "mongoDB",
     "connector": "mongodb"
   },
