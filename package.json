@@ -21,7 +21,8 @@
     "loopback-connector-mongodb": "^5",
     "loopback-datasource-juggler": "^3",
     "serve-favicon": "^2.0.1",
-    "storage": "^0.2.0"
+    "storage": "^0.2.0",
+    "strong-error-handler": "^4.0.1"
   },
   "devDependencies": {
     "bower": "^1.8.14",
