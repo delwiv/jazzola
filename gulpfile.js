@@ -3,14 +3,10 @@ var gulp = require('gulp');
 
 // Include plugins
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var recess = require('gulp-recess');
 var watch  = require('gulp-watch');
-var gutil  = require('gulp-util');
-var bower  = require('gulp-bower');
 var spawn = require('child_process').spawn;
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var node;
 
 var ngAnnotate = require('gulp-ng-annotate');
@@ -21,14 +17,6 @@ gulp.task('watch-js', function () {
 	});
 });
 
-// gulp.task('bower', function(){
-//     return bower()
-//     // .pipe(recess().on('error', gutil.log))
-//     .pipe(concat('delwiv-labs-deps.js'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('client/dist'))
-// })
 
 gulp.task('server', function(){
 	if (node) node.kill()
@@ -61,8 +49,10 @@ gulp.task('scripts', function() {
 });
 
 // Default Task
-gulp.task('default', ['server', 'scripts', 'watch-js', 'sass'], function() {
-	gulp.watch('client/**/*.scss', ['sass']);
-	gulp.watch('client/**/*.js', ['scripts']);
-	gulp.watch('server/**/*.js', ['server']);
+gulp.task('build', ['scripts', 'sass']);
+
+gulp.task('default', ['server', 'scripts', 'watch-js', 'sass'], function () {
+    gulp.watch('client/**/*.scss', ['sass']);
+    gulp.watch('client/js/**/*.js', ['scripts']);
+    gulp.watch('server/**/*.js', ['server']);
 });
