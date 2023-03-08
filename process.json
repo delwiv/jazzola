@@ -1,15 +1,8 @@
 {
   "apps": [
     {
-      "name": "swing-family",
-      "script": "./server/server.js",
-      "watch": ["./server", "./client", "./common"],
-      "instances": 1,
-      "exec_mode": "fork",
-      "watch_options": {
-        "persistent": true,
-        "ignoreInitial": false
-      }
+      "name": "jazzola",
+      "script": "./server/server.js"
     }
   ]
 }
